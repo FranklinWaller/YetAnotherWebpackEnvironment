@@ -1,0 +1,49 @@
+{
+    "name": "newbuild",
+    "version": "1.0.0",
+    "description": "New Build",
+    "main": "index.js",
+    "scripts": {
+        "build": "webpack --config ./webpack.config.js",
+        "build:web": "cross-env NODE_ENV=production webpack --config ./webpack.config.web.js",
+        "build:dev": "cross-env NODE_ENV=development webpack --config ./webpack.config.web.js",
+        "build:publish": "webpack --config ./webpack.config.js",
+        "docs": "documentation build ./src > ./docs/codebase.md --shallow false --format md --sort-order alpha",
+        "release": "standard-version",
+        "start": "webpack-dev-server --config ./webpack.config.js --open true --port 9001 --inline"
+    },
+    "author": "Franklin Waller",
+    "license": "MIT",
+    "devDependencies": {
+        "babel-core": "6.26.0",
+        "babel-eslint": "8.2.1",
+        "babel-loader": "7.1.2",
+        "babel-plugin-transform-class-properties": "^6.24.1",
+        "babel-plugin-transform-object-rest-spread": "^6.26.0",
+        "babel-preset-env": "1.6.1",
+        "babel-runtime": "^6.26.0",
+        "cross-env": "5.1.3",
+        "css-loader": "^0.28.9",
+        "documentation": "5.3.5",
+        "eslint": "4.17.0",
+        "eslint-config-airbnb": "^16.1.0",
+        "eslint-loader": "^1.9.0",
+        "eslint-plugin-babel": "4.1.2",
+        "eslint-plugin-import": "^2.8.0",
+        "eslint-plugin-jsx-a11y": "^6.0.3",
+        "eslint-plugin-react": "^7.6.1",
+        "eslint-summary": "^1.0.0",
+        "node-sass": "^4.7.2",
+        "sass-loader": "^6.0.6",
+        "standard-version": "^4.3.0",
+        "style-loader": "^0.20.1",
+        "webpack": "^3.10.0",
+        "webpack-dev-server": "2.11.1"
+    },
+    "dependencies": {
+        "babel-polyfill": "6.26.0",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-preset-react": "^6.24.1",
+        "whatwg-fetch": "2.0.3"
+    }
+}
