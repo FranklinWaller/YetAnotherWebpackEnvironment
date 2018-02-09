@@ -1,8 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 
-// Exclude all node modules packages except the two packages rtl-account and rtl-fkid-browser-cookie
-const exclude = 'node_modules';
+const exclude = '/node_modules';
 
 module.exports = {
     devtool: 'source-map',
