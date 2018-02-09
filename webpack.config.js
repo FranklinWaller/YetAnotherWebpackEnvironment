@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 const exclude = '/node_modules';
+const nodeEnv = process.env.NODE_ENV || 'development';
 
 module.exports = {
     devtool: 'source-map',
@@ -48,5 +49,11 @@ module.exports = {
             },
         ],
     },
-    plugins: [],
+    plugins: [
+        new webpack.DefinePlugin({
+            'process.env': {
+                NODE_ENV: JSON.stringify(nodeEnv),
+            },
+        }),
+    ],
 };
