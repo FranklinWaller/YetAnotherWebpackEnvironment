@@ -2,10 +2,9 @@ const path = require('path');
 const webpack = require('webpack');
 
 const exclude = '/node_modules';
-const nodeEnv = process.env.NODE_ENV || 'development';
 
 module.exports = {
-    devtool: 'source-map',
+    mode: process.env.NODE_ENV,
     resolve: {
         extensions: ['.js', '.jsx'],
     },
@@ -19,7 +18,7 @@ module.exports = {
         publicPath: '/build/',
     },
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.(jpe?g|png|gif|svg)$/i,
                 loader: 'url-loader',
@@ -49,11 +48,4 @@ module.exports = {
             },
         ],
     },
-    plugins: [
-        new webpack.DefinePlugin({
-            'process.env': {
-                NODE_ENV: JSON.stringify(nodeEnv),
-            },
-        }),
-    ],
 };
