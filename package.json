@@ -9,7 +9,8 @@
         "build:dev": "cross-env NODE_ENV=development webpack --config ./webpack.config.js",
         "docs": "documentation build ./src > ./docs/codebase.md --shallow false --format md --sort-order alpha",
         "release": "standard-version",
-        "start": "cross-env NODE_ENV=development webpack-dev-server --config ./webpack.config.js --open true --port 9001 --inline"
+        "start": "cross-env NODE_ENV=development webpack-dev-server --config ./webpack.config.js --open true --port 9001 --inline",
+        "test": "jest"
     },
     "author": "Franklin Waller",
     "license": "MIT",
@@ -40,12 +41,13 @@
         "style-loader": "^0.20.2",
         "webpack": "^4.0.1",
         "webpack-cli": "^2.0.9",
-        "webpack-dev-server": "3.1.0"
+        "webpack-dev-server": "3.1.0",
+        "jest": "^22.4.2"
     },
     "dependencies": {
+        "babel-polyfill": "6.26.0",
         "react": "^16.2.0",
         "react-dom": "^16.2.0",
-        "babel-polyfill": "6.26.0",
         "whatwg-fetch": "2.0.3"
     }
 }
