@@ -10,7 +10,8 @@
         "docs": "documentation build ./src > ./docs/codebase.md --shallow false --format md --sort-order alpha",
         "release": "standard-version",
         "start": "cross-env NODE_ENV=development webpack-dev-server --config ./webpack.config.js --open true --port 9001 --inline",
-        "test": "jest"
+        "test": "jest",
+        "lint": "eslint ./src/ --cache --ignore-pattern .gitignore"
     },
     "author": "Franklin Waller",
     "license": "MIT",
