@@ -6,7 +6,6 @@
     "scripts": {
         "build": "cross-env NODE_ENV=development webpack --config ./webpack.config.js",
         "build:prod": "cross-env NODE_ENV=production webpack --config ./webpack.config.js",
-        "build:dev": "cross-env NODE_ENV=development webpack --config ./webpack.config.js",
         "docs": "documentation build ./src > ./docs/codebase.md --shallow false --format md --sort-order alpha",
         "release": "standard-version",
         "start": "cross-env NODE_ENV=development webpack-dev-server --config ./webpack.config.js --open true --port 9001 --inline",
