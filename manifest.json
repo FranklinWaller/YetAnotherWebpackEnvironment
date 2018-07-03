@@ -1,0 +1,16 @@
+{
+    "name": "NAME_HERE",
+    "short_name": "NAME_HERE",
+    "icons": [
+        {
+            "src": "ICON_HERE",
+            "type": "image/png",
+            "sizes": "128x128"
+        }
+    ],
+    "start_url": "URL_HERE",
+    "scope": "/",
+    "display": "standalone",
+    "background_color": "#FFFFFF",
+    "theme_color": "#34D8D1"
+}
