@@ -39,11 +39,15 @@ module.exports = {
                 test: /\.scss$/,
                 loaders: [
                     {
-                        loader: 'style-loader?sourceMap',
+                        loader: 'style-loader',
                     }, {
                         loader: 'css-loader',
                         options: {
-                            localIdentName: '[path][name]__[local]--[hash:base64:5]',
+                            sourceMap: true,
+                            modules: {
+                                mode: 'local',
+                                localIdentName: '[path][name]__[local]--[hash:base64:5]',
+                            },
                         },
                     }, {
                         loader: 'sass-loader',
