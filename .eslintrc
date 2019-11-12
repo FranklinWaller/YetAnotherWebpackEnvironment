@@ -1,5 +1,6 @@
 {
-    "parser": "babel-eslint",
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint"],
     "env": {
         "browser": true
     },
@@ -17,10 +18,16 @@
         "react/jsx-indent-props": [
             "error",
             4
+        ],
+        "@typescript-eslint/indent": [
+            "error",
+            4
         ]
     },
-    "globals": {
-        "Meister": true
-    },
-    "extends": "airbnb"
+    "extends": "airbnb-typescript",
+    "overrides": [
+        {
+            "files": "**/**.ts"
+        }
+    ]
 }
